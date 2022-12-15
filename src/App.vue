@@ -1,16 +1,20 @@
 <script>
-import Calculator from './components/Calculator.vue';
+import Screen from './components/Screen.vue';
+import Buttons from './components/buttons.vue';
 export default{
   name:"App",
   components:{
-    Calculator
+    Screen,
+    Buttons
   }
 }
 </script>
 
 <template>
- <Calculator/>
- 
+<div class="calculator">
+ <Screen/>
+ <Buttons/>
+</div>
 </template>
 
 <style>
@@ -22,5 +26,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgba(37, 37, 65, 0.706);
 }
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(7,1fr);
+  height: 90vh;
+  gap: 1.3em;
+  background-color: rgb(43, 41, 41);
+  padding: 1.5em;
+  }
 </style>
